@@ -1,0 +1,13 @@
+# secrets
+.env
+
+# environment
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# big generated files (keep folders via .gitkeep)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.parquet
+models/
