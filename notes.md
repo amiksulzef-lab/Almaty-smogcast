@@ -36,3 +36,11 @@ In winter, PM2.5 is highest at 15:00 and lowest at 6:00. I thought it would be w
 I made the first plots in `01_eda.ipynb`. Winter PM2.5 is about 6 times higher than in summer. The average is around 70 µg/m³ in January and 67 in December, compared to 10–12 in summer.
 During the heating season, weekdays and weekends look almost the same, with averages around 50–55 µg/m³. This suggests traffic may not be the main cause of winter smog.
 The 10 most polluted days were all in December or January, between 2020 and 2023. Daily averages were 170–222 µg/m³. It was cold, from -6 to -14 °C, and the boundary layer was only about 25–70 m high, leaving little room for pollution to spread. The wind wasn’t always weak, so cold weather and poor air mixing may explain more than wind speed alone.
+
+
+
+## Day 5
+
+I compared PM2.5 with the weather. Daily PM2.5 had the strongest correlation with temperature (-0.65), followed by boundary layer height, or BLH (-0.51). Wind had almost no correlation (0.03). BLH tells us how high the air can mix. When it’s low, pollution can stay trapped near the ground. The median line on the plot also shows lower PM2.5 as BLH gets higher.
+
+PM2.5 usually rises around the start of heating, roughly 15 October. It went from 25 to 31 µg/m³ in 2020, from 14 to 20 in 2023, and from 18 to 31 in 2025. The change was small in 2022 and 2024, and there’s no data for 2021. Colder weather could explain part of the increase too.
