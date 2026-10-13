@@ -31,3 +31,8 @@ I used `build_dataset.py` to put weather, CAMS and PM2.5 data into one hourly ta
 About 34% of PM2.5 data is missing. In 2021–2022, around 45% is missing, but in 2024, it’s only about 5%. There’s no data for 2026 because the embassy station stopped working.
 
 In winter, PM2.5 is highest at 15:00 and lowest at 6:00. I thought it would be worst in the evening, so this was surprising. I checked nearby Clarity sensors, and they showed the same pattern. Maybe daytime winds carry polluted air uphill from the lower parts of the city.
+## Day 4
+
+I made the first plots in `01_eda.ipynb`. Winter PM2.5 is about 6 times higher than in summer. The average is around 70 µg/m³ in January and 67 in December, compared to 10–12 in summer.
+During the heating season, weekdays and weekends look almost the same, with averages around 50–55 µg/m³. This suggests traffic may not be the main cause of winter smog.
+The 10 most polluted days were all in December or January, between 2020 and 2023. Daily averages were 170–222 µg/m³. It was cold, from -6 to -14 °C, and the boundary layer was only about 25–70 m high, leaving little room for pollution to spread. The wind wasn’t always weak, so cold weather and poor air mixing may explain more than wind speed alone.
