@@ -44,3 +44,11 @@ The 10 most polluted days were all in December or January, between 2020 and 2023
 I compared PM2.5 with the weather. Daily PM2.5 had the strongest correlation with temperature (-0.65), followed by boundary layer height, or BLH (-0.51). Wind had almost no correlation (0.03). BLH tells us how high the air can mix. When it’s low, pollution can stay trapped near the ground. The median line on the plot also shows lower PM2.5 as BLH gets higher.
 
 PM2.5 usually rises around the start of heating, roughly 15 October. It went from 25 to 31 µg/m³ in 2020, from 14 to 20 in 2023, and from 18 to 31 in 2025. The change was small in 2022 and 2024, and there’s no data for 2021. Colder weather could explain part of the increase too.
+
+## Day 6
+
+I compared CAMS forecasts with the measured PM2.5. In winter (December–February), CAMS gave an average of about 34 µg/m³, while the measurements averaged 61. The bias was -27 µg/m³ and the MAE was about 40. Most winter points on the scatter plot were below the red line, so CAMS often missed how bad the pollution actually was.
+
+In summer, the forecasts were much closer to the measurements. The MAE was about 6 µg/m³, and CAMS was slightly too high on average, with a bias of +3.
+
+The biggest errors were in winter, when Almaty has its worst smog. That’s where I want my model to improve the forecasts most.
