@@ -19,6 +19,8 @@ Data I use
 - PM2.5: OpenAQ, from the US Embassy station in Almaty. The original data comes from AirNow.
 - Weather: hourly historical data from Open-Meteo.
 - Forecast: CAMS PM2.5 predictions from the Open-Meteo air quality API.
+- before march 2024 Almaty was on UTC+6 then it switched to UTC+5 Open Meteo uses UTC+5 for all years but the embassy data used the old time so pollution and weather were one hour out of sync now everything uses UTC+5
+- BLH is the height of the air layer where pollution mixes the lower it is the more pollution stays near the ground Open Meteo has no BLH data for january through june 2024
 
 How to run it
 
