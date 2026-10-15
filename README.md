@@ -46,3 +46,4 @@ python src/download_openaq.py
 Winter is about 6 times dirtier than summer the worts moths are december, january and february. Then air gets better in march and turns bad again in November when heating starts
 ![Daily cycle](results/figures/daily_cycle.png)
 Firtsly, I thought that the worst air would be in the evenings, but in winter the is around 12:00-16:00. The cleanest time is early morning, around 6:00. In the summer the air is clean all day and  the line almost flat
+I don't what are the reasons for this
