@@ -41,3 +41,6 @@ python src/download_weather.py
 python src/download_cams.py
 python src/download_openaq.py
 ```
+
+![PM2.5 by month](results/figures/pm25_by_month.png)
+![Daily cycle](results/figures/daily_cycle.png)
