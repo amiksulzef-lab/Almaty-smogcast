@@ -52,7 +52,10 @@ I compared CAMS forecasts with the measured PM2.5. In winter (December–Februar
 In summer, the forecasts were much closer to the measurements. The MAE was about 6 µg/m³, and CAMS was slightly too high on average, with a bias of +3.
 
 The biggest errors were in winter, when Almaty has its worst smog. That’s where I want my model to improve the forecasts most
-day 8
+## Day 7
+
+I wrote what I learned in the notebook and updated the README. I added two things about the data: the time zone change in March 2024 and missing BLH data for January–June 2024. I also added two plots to the README: PM2.5 by month and the daily cycle
+##day 8
 
 made features.py to turn hourly data into one row per day with 38 features
 
