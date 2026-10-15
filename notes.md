@@ -1,4 +1,4 @@
-#Notes
+# Notes
 ## Day 1
 
 I live in Almaty, and the air here gets really bad in winter. That's why I wanted to do a project about local air pollution.
@@ -71,6 +71,15 @@ I wrote what I learned in the notebook and updated the README. I added two thing
 
 ## Day 8
 
-Made features.py to turn hourly data into one row per day with 38 features the model predicts tomorrow's average PM2.5 using data available by midnight the strongest feature is PM2.5 at 23:00 today which makes sense because bad air late at night often carries over into the next day
+I made features.py to turn hourly data into one row per day with 38 features. The model predicts tomorrow's average PM2.5 using data available by midnight. The strongest feature is PM2.5 at 23:00 today, which makes sense because bad air late at night often carries over into the next day.
 
-tomorrow's weather comes from actual recorded data so it works like a perfect forecast real forecasts can be wrong so the results may look better than they would in practice.
+Tomorrow's weather comes from actual recorded data, so it works like a perfect forecast. Real forecasts can be wrong, so the results may look better than they would in practice.
+## Day 9
+
+I made evaluate.py. It calculates MAE, RMSE and how often the model gets the air quality category right (good, unhealthy or very unhealthy).
+
+I split the data by time: train is September 2020 - 2023, validation is 2024 and test is 2025. I can't shuffle the days, because then the model would see days from the future and the results would look better than they really are.
+
+At first I wanted to test on 2026, but the embassy station stopped working on 14 November 2025. So the test year is 2025.
+
+The simplest baseline is "tomorrow = today". It got an MAE of 8.83 µg/m³ on the test year. CAMS got 10.19, so even this simple guess is more accurate than CAMS for Almaty
