@@ -92,3 +92,16 @@ LightGBM did best in this run. Its MAE was about 33% lower than CAMS and 23% low
 Linear regression did worse than just saying "tomorrow = today". Maybe it misses how cold weather, wind and heating work together. The scores alone don't tell me why it did worse.
 
 I used early stopping to choose how many trees to use. It stops training when the validation score stops improving, which helps reduce overfitting. Then I trained LightGBM again on train + validation with the same number of trees, so the final model could also use 2024, the year just before the test.
+Day 11
+
+  I checked the 10 biggest LightGBM errors. All were forecasts made in January, February and early March 2025. On all 10, the prediction was too low. Measured PM2.5 was around 80-125 µg/m³, while the model predicted 40-80.
+
+  The weather was similar in these cases: about -9 to -2 °C, weak wind and very low BLH, around 30-80 m. There was almost no rain, and only one of the days was a holiday (7 January). The model predicted bad air, but the actual smog was much worse.
+
+  In February the average error was about 21 µg/m³, in January about 15, and in summer only 1-4. Sudden jumps in PM2.5 from one day to the next were also hard for the model.
+
+  I think there may be too few extreme days in the training data. I also used MAE, which doesn't penalise big errors as strongly as squared error does. These could be part of the reason it misses the highest peaks. CAMS was even lower on these days. In February it predicted about 40 µg/m³ when the measurements were 110-125.
+
+  I also tried removing the features that use tomorrow's recorded weather. MAE went from 6.84 to 7.11 µg/m³. Without those features, the MAE was still about 30% lower than CAMS.
+
+  The dates in the error table show when each forecast was made. Each prediction is for the following day
