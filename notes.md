@@ -105,3 +105,12 @@ I used early stopping to choose how many trees to use. It stops training when th
   I also tried removing the features that use tomorrow's recorded weather. MAE went from 6.84 to 7.11 µg/m³. Without those features, the MAE was still about 30% lower than CAMS.
 
   The dates in the error table show when each forecast was made. Each prediction is for the following day
+## Day 12
+
+Today I used SHAP to better understand how my LightGBM model makes predictions. It helped me see which features matter the most and how they affect the predicted pollution level on different days.
+
+I divided the features into four groups: weather, heating/season, traffic (weekdays and holidays), and past pollution levels. When I excluded past pollution, weather accounted for around 92% of the total SHAP importance, heating/season for about 7%, and traffic for almost 0%.
+
+I also checked the three days with the highest pollution levels. All three were very cold (-6 to -14°C), and the boundary layer height (BLH) was only around 24–34 meters. This suggests that the weather made it harder for pollution to spread out.
+
+One problem is that weather and heating are closely connected. When it gets colder, people use more coal for heating, so it's difficult to tell how much each one contributes. I also didn't have actual traffic data, only weekdays and holidays as indicators, so I can't really draw conclusions about the impact of cars.
