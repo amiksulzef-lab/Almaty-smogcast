@@ -83,3 +83,12 @@ I split the data by time: train is September 2020 - 2023, validation is 2024 and
 At first I wanted to test on 2026, but the embassy station stopped working on 14 November 2025. So the test year is 2025.
 
 The simplest baseline is "tomorrow = today". It got an MAE of 8.83 µg/m³ on the test year. CAMS got 10.19, so even this simple guess is more accurate than CAMS for Almaty
+## Day 10
+
+I made train.py and compared four forecasts on the 2025 test data. CAMS got MAE 10.19 µg/m³, linear regression 9.66, the baseline 8.83 and LightGBM 6.84.
+
+LightGBM did best in this run. Its MAE was about 33% lower than CAMS and 23% lower than the baseline. It also got the PM2.5 group right on about 92% of test days.
+
+Linear regression did worse than just saying "tomorrow = today". Maybe it misses how cold weather, wind and heating work together. The scores alone don't tell me why it did worse.
+
+I used early stopping to choose how many trees to use. It stops training when the validation score stops improving, which helps reduce overfitting. Then I trained LightGBM again on train + validation with the same number of trees, so the final model could also use 2024, the year just before the test.
