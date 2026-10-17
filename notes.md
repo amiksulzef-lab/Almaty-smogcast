@@ -131,6 +131,6 @@ Today I made a tracker for CHP-2. It compares measured PM2.5 after the switch to
 
 I can't just compare the winter before and after. One winter could be warmer, windier or have better air mixing. Other pollution sources could change too.
 
-In the past winter checks, the gap between measured and predicted seasonal averages was as big as 35.4%. So a drop after the switch could still be a model error. I can't use 35.4% as a strict cutoff either. Even a bigger difference wouldn't prove that CHP-2 caused it.
+In the past winters checks, the gap between measured and predicted seasonal averages was as big as 35.4%. So a drop after the switch could still be a model error. I can't use 35.4% as a strict cutoff either. Even a bigger difference wouldn't prove that CHP-2 caused it.
 
 There are no measurements after the switch yet. I plan to run the tracker once a week when new PM2.5 data becomes available.
