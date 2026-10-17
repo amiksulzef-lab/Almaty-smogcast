@@ -114,3 +114,14 @@ I divided the features into four groups: weather, heating/season, traffic (weekd
 I also checked the three days with the highest pollution levels. All three were very cold (-6 to -14°C), and the boundary layer height (BLH) was only around 24–34 meters. This suggests that the weather made it harder for pollution to spread out.
 
 One problem is that weather and heating are closely connected. When it gets colder, people use more coal for heating, so it's difficult to tell how much each one contributes. I also didn't have actual traffic data, only weekdays and holidays as indicators, so I can't really draw conclusions about the impact of cars.
+## Day 13
+
+Today I made a model that only uses weather and calendar features. I left out past PM2.5 because after the switch to gas, those values could already include the change I want to measure. The model could just follow the lower pollution instead of showing how different it is from before.
+
+I tested it by leaving one winter out, training on the other years and predicting the hidden winter. I repeated this for five winters. I compared the average PM2.5 over each heating season. Three of the five had gaps of about 8-12%.
+
+The worst result was 2020-21. The model expected an average of 49.6 µg/m³, but the measured average was 67.1. That was 35.4% higher than expected. I still need to check why it missed that winter so badly.
+
+For 2023-24, BLH is missing for part of the heating season. The measured PM2.5 was 22.5% below the model's estimate. When I removed the BLH features, the gap fell to 13.3%. Missing BLH could be part of the problem, but removing it made the other winters worse.
+
+If PM2.5 after the CHP-2 switch is about 10% below what the model expects, that could still be a model error. I already saw bigger gaps in the old data. Even a larger drop wouldn't prove on its own that it came from the switch to gas.
