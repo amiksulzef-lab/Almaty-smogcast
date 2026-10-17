@@ -125,3 +125,12 @@ The worst result was 2020-21. The model expected an average of 49.6 µg/m³, but
 For 2023-24, BLH is missing for part of the heating season. The measured PM2.5 was 22.5% below the model's estimate. When I removed the BLH features, the gap fell to 13.3%. Missing BLH could be part of the problem, but removing it made the other winters worse.
 
 If PM2.5 after the CHP-2 switch is about 10% below what the model expects, that could still be a model error. I already saw bigger gaps in the old data. Even a larger drop wouldn't prove on its own that it came from the switch to gas.
+## Day 14
+
+Today I made a tracker for CHP-2. It compares measured PM2.5 after the switch to gas with what the weather model expects for the same conditions, based on the coal years.
+
+I can't just compare the winter before and after. One winter could be warmer, windier or have better air mixing. Other pollution sources could change too.
+
+In the past winter checks, the gap between measured and predicted seasonal averages was as big as 35.4%. So a drop after the switch could still be a model error. I can't use 35.4% as a strict cutoff either. Even a bigger difference wouldn't prove that CHP-2 caused it.
+
+There are no measurements after the switch yet. I plan to run the tracker once a week when new PM2.5 data becomes available.
